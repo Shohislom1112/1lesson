@@ -1,6 +1,6 @@
 // import React from 'react'
 import "./AllStudent.scss"
-function AllTovar() {
+function AllStudent() {
   return (
     <div className='allstudent'>
         
@@ -8,4 +8,4 @@ function AllTovar() {
   )
 }
 
-export default AllTovar
+export default AllStudent

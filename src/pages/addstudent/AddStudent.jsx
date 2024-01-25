@@ -2,7 +2,7 @@
 // import {  } from "react-loader-spinner"
 import { useState } from "react";
 import "./AddStudent.scss"
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function AddTovar() {
   // const navigate = <Navigate/>
   const [data, setData] = useState({
@@ -21,21 +21,9 @@ function AddTovar() {
       <div className="addinput">
 
       <div className="input">
-      <div className="input_first">
-        <label htmlFor="" className="lab">Название <p className="red">*</p></label>
-      <input
-          className="usern"
-          aria-label="Название *"
-          type="text"
-          id="Название"
-          name="Название"
-          // value={data.username}
-          // onChange={(e) => setData((prevData) => ({ ...prevData, username: e.target.value }))}
-        />
-      </div>
       <div className="input_second">
         <div className="tt">
-        <label htmlFor=""className="lab">Бренд <p className="red">*</p></label>
+        <label htmlFor=""className="lab">FirstName <p className="red">*</p></label>
       <input
           className="usern"
           aria-label="Бренд *"
@@ -47,7 +35,7 @@ function AddTovar() {
         />
         </div>
         <div className="tt">
-        <label htmlFor=""className="lab">Артикул производителя <p className="red">*</p></label>
+        <label htmlFor=""className="lab">Lastname <p className="red">*</p></label>
         <input
           className="usern"
           aria-label="Артикул производителя  *"
@@ -59,25 +47,13 @@ function AddTovar() {
         />
         </div>
       </div>
-      <div className="input_third">
-      <label htmlFor=""className="lab">Описание <p className="red">*</p></label>
-        <input
-          className="usern"
-          aria-label="Артикул производителя  *"
-          type="text"
-          id="Артикул"
-          name="Артикул"
-          // value={data.username}
-          // onChange={(e) => setData((prevData) => ({ ...prevData, username: e.target.value }))}
-        />
-      </div>
       <div className="input_fourth">
       <div className="tt">
-        <label htmlFor=""className="lab">Цена</label>
+        <label htmlFor=""className="lab">Password</label>
         <input
           className="usern"
           aria-label="Артикул производителя  *"
-          type="text"
+          type="password"
           id="Артикул"
           name="Артикул"
           value={data.cost}
@@ -85,11 +61,11 @@ function AddTovar() {
         />
         </div>
         <div className="tt">
-        <label htmlFor=""className="lab">Цена со скидкой</label>
+        <label htmlFor=""className="lab">Work</label>
         <input
           className="usern"
           aria-label="Артикул производителя  *"
-          type="text"
+          type="checkbox"
           id="Артикул"
           name="Артикул"
           value={data.stock}

@@ -12,7 +12,7 @@ const [search, setSearch] = useState('');
 
 
   const FetchCard = async () => {
-      const res = await axios.get('http://localhost:3000/products');
+      const res = await axios.get('http://localhost:3000/Students');
       const data = await res.data;
       console.log(data);
       setAllcard(data)
@@ -35,7 +35,7 @@ const [search, setSearch] = useState('');
   return (
     <div className="div">
          <div className="div2">
-          <h4>Все товары ()</h4>
+          <h4>All Students ()</h4>
           <input type="search"
             id="search"
             placeholder="Поиск"
@@ -49,11 +49,11 @@ const [search, setSearch] = useState('');
         <div className='tovar_name'>
           <div className="tovarr">
               {/* <Header /> */}
-              <p className='home__text p'>Наименование</p>
-            <p className='home__category p1'>Артикул</p>
-            <p className='home__brend p2'>Бренд</p>
-            <p className='home__cost p3'>Цена</p>
-            <p className='home__stock p4'>Цена со скидкой</p>
+              <p className='home__text p'>Id</p>
+            <p className='home__category p1'>FirstName</p>
+            <p className='home__brend p2'>LastName</p>
+            <p className='home__cost p3'>PassWord</p>
+            <p className='home__stock p4'>Work</p>
                      
 
           </div>
@@ -61,21 +61,21 @@ const [search, setSearch] = useState('');
             {
                 allcard.map((allcard) => (
                   <ul key={allcard.id} className='tovarr'>
-                  <li className='home__text p'>
-                  <input type="checkbox" />
-                  Товар{allcard.id}
+                  <li className='home__text p'> 
+                  
+                  Students{allcard.userId}
                   </li>
               <li className='home__category p1'>
-                  {allcard.category}
+                  {allcard.FirstName}
               </li>
               <li className='home__brend p2'>
-                  {allcard.brand}
+                  {allcard.LastName}
               </li>
               <li className='home__cost p3'>
-                  {allcard.price} $
+                  {allcard.Password} 
               </li>
               <li className='home__stock p4'>
-                  {allcard.stock}$
+                  {allcard.Work}
                   <hr />
               </li>
               

@@ -1,0 +1,28 @@
+{
+    "Students" : [
+        {
+            "userId": 1,
+            "id": 1,
+            "FirstName": "Shohislom",
+            "LastName": "Ravshanov",
+            "Password": "123",
+            "Work": "true"
+          },
+        {
+            "userId": 2,
+            "id": 2,
+            "FirstName": "Shohjahon",
+            "LastName": "Jo`rayev",
+            "Password": "852",
+            "Work": "false"
+          },
+        {
+            "userId": 3,
+            "id": 3,
+            "FirstName": "Nodir",
+            "LastName": "Shoh",
+            "Password": "321",
+            "Work": "true"
+          }
+    ]
+}
