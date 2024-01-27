@@ -1,26 +1,17 @@
 // import React from 'react'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Home.scss"
-import axios from "axios";
+// import axios from "axios";
 // import { NavLink } from "react-router-dom";
 // import Header from "../../components/header/Header";
-function Home() {
+function Home({contact}) {
+  
+  // const [contactsToSend, setContactsToSend] = useState(contacts);
   // const [error, setError] = useState('');
-const [allcard, setAllcard] = useState([])
+// const [allcard, setAllcard] = useState([])
 const [search, setSearch] = useState('');
   
 
-
-  const FetchCard = async () => {
-      const res = await axios.get('http://localhost:3000/Students');
-      const data = await res.data;
-      console.log(data);
-      setAllcard(data)
-    
-  };
-  useEffect(()=> {
-    FetchCard()
-  }, [])
  
     const handleSearchChange = (e) => {
     setSearch(e.target.value);
@@ -49,7 +40,7 @@ const [search, setSearch] = useState('');
         <div className='tovar_name'>
           <div className="tovarr">
               {/* <Header /> */}
-              <p className='home__text p'>Id</p>
+              {/* <p className='home__text p'>Id</p> */}
             <p className='home__category p1'>FirstName</p>
             <p className='home__brend p2'>LastName</p>
             <p className='home__cost p3'>PassWord</p>
@@ -59,23 +50,23 @@ const [search, setSearch] = useState('');
           </div>
 <hr />
             {
-                allcard.map((allcard) => (
-                  <ul key={allcard.id} className='tovarr'>
+                contact.map((student) => (
+                  <ul key={student.id} className='tovarr'>
                   <li className='home__text p'> 
                   
-                  Students{allcard.userId}
+                  {/* Students{student.userId} */}
                   </li>
               <li className='home__category p1'>
-                  {allcard.FirstName}
+                  {student.irstName}
               </li>
               <li className='home__brend p2'>
-                  {allcard.LastName}
+                  {student.lastName}
               </li>
               <li className='home__cost p3'>
-                  {allcard.Password} 
+                  {student.password} 
               </li>
               <li className='home__stock p4'>
-                  {allcard.Work}
+                  {student.work}
                   <hr />
               </li>
               

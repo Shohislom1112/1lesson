@@ -14,6 +14,9 @@ import Profile from "./pages/profile/Profile";
 import Loader from "./components/Loader";
 
 function App() {
+  const contactsLocal = JSON.parse(localStorage.getItem('contacts')) || [];
+  const [contacts, setContacts] = useState(contactsLocal);
+
 
   const storedUserData = localStorage.getItem("user");
   const [user, setUser] = useState(
@@ -54,9 +57,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Suspense fallback={<Loader/> }><NotStudent/></Suspense>} />
               <Route path="login" element={<Suspense fallback={<Loader/>}><Login setUser={setUser} /></Suspense>} />
-              <Route path="addtovar" element={<Suspense fallback={<Loader/>}><AddStudent /></Suspense>} />
+              <Route path="addtovar" element={<Suspense fallback={<Loader/>}><AddStudent contacts={contacts}  /></Suspense>} />
               <Route path="profile" element={<Suspense fallback={<Loader/> }><Profile setUser={setUser} user={user} /></Suspense>} />
-              <Route path="home" element={<Suspense fallback={<Loader/> }><Home /></Suspense>} />
+              <Route path="home" element={<Suspense fallback={<Loader/> }><Home contact={contacts}  setContacts={setContacts}    /></Suspense>} />
               <Route path="*" element={<Suspense fallback={<Loader/>}><NotFound /></Suspense>} />
             </Routes>
           </div>
