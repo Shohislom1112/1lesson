@@ -59,7 +59,7 @@ function App() {
               <Route path="login" element={<Suspense fallback={<Loader/>}><Login setUser={setUser} /></Suspense>} />
               <Route path="addtovar" element={<Suspense fallback={<Loader/>}><AddStudent contacts={contacts}  /></Suspense>} />
               <Route path="profile" element={<Suspense fallback={<Loader/> }><Profile setUser={setUser} user={user} /></Suspense>} />
-              <Route path="home" element={<Suspense fallback={<Loader/> }><Home contact={contacts}  setContacts={setContacts}    /></Suspense>} />
+              <Route path="home" element={<Suspense fallback={<Loader/> }><Home contacts={contacts}  setContacts={setContacts}    /></Suspense>} />
               <Route path="*" element={<Suspense fallback={<Loader/>}><NotFound /></Suspense>} />
             </Routes>
           </div>

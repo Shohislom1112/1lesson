@@ -14,7 +14,7 @@ function AddTovar({contacts, setContacts}) {
     work:'false'
   });
 
-  const addContact = (contact) => {
+  const addContact = (contacts) => {
     
     const newContacts = [
       { id: Math.floor(Math.random() * 10000000000), ...contacts },
@@ -43,14 +43,14 @@ function AddTovar({contacts, setContacts}) {
       <div className="input_second">
         <div className="tt">
           <label htmlFor=""className="lab">FirstName <p className="red">*</p></label>
-      <input
+          <input
           className="usern"
-          
+         
           type="text"
-          id="Бренд"
-          name="Бренд"
-          value={data.firstname}  
-          onChange={(e) => setData({ ...data, firstName: e.target.value })}        />
+          id="Артикул"
+          name="Артикул"
+          value={data.firstname}
+          onChange={(e) => setData({ ...data, firstname: e.target.value })}        />
         </div>
         <div className="tt">
         <label htmlFor=""className="lab">Lastname <p className="red">*</p></label>

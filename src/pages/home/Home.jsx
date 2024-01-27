@@ -4,7 +4,7 @@ import "./Home.scss"
 // import axios from "axios";
 // import { NavLink } from "react-router-dom";
 // import Header from "../../components/header/Header";
-function Home({contact}) {
+function Home({contacts}) {
   
   // const [contactsToSend, setContactsToSend] = useState(contacts);
   // const [error, setError] = useState('');
@@ -50,30 +50,21 @@ const [search, setSearch] = useState('');
           </div>
 <hr />
             {
-                contact.map((student) => (
-                  <ul key={student.id} className='tovarr'>
-                  <li className='home__text p'> 
-                  
-                  {/* Students{student.userId} */}
-                  </li>
-              <li className='home__category p1'>
-                  {student.irstName}
-              </li>
-              <li className='home__brend p2'>
-                  {student.lastName}
-              </li>
-              <li className='home__cost p3'>
-                  {student.password} 
-              </li>
-              <li className='home__stock p4'>
-                  {student.work}
-                  <hr />
-              </li>
-              
-              </ul>
+                contacts.map((contact) => (
+                  <div
+                  className="card p-2 mb-2 d-flex flex-row align-items-center justify-content-between"
+                  key={contact.id}
+                >
+                   <div>
+            <h3>
+              {contact.firstname} {contact.lastname}
+            </h3>
+            <p>{contact.password}</p>
+            <p>{contact.work}</p>
+          </div>
+          </div>
                 ))
               }
-              <hr />
 
 
         </div>
